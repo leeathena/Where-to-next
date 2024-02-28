@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+
+const CityForm = () => {
+  // State variables to hold the values of the city inputs
+  const [city1, setCity1] = useState('');
+  const [city2, setCity2] = useState('');
+  const [city3, setCity3] = useState('');
+  const [city4, setCity4] = useState('');
+  const [city5, setCity5] = useState('');
+
+  // Event handlers to update state when the user enters values into the input fields
+  const handleCity1Change = (event) => {
+    setCity1(event.target.value);
+  };
+
+  const handleCity2Change = (event) => {
+    setCity2(event.target.value);
+  };
+
+  const handleCity3Change = (event) => {
+    setCity3(event.target.value);
+  };
+
+  const handleCity4Change = (event) => {
+    setCity4(event.target.value);
+  };
+
+  const handleCity5Change = (event) => {
+    setCity5(event.target.value);
+  };
+
+  // Submit handler to handle the form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Do something with the city values, e.g., send them to a server
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        City 1:
+        <input type="text" value={city1} onChange={handleCity1Change} />
+      </label>
+      <br />
+      <label>
+        City 2:
+        <input type="text" value={city2} onChange={handleCity2Change} />
+      </label>
+      <br />
+      <label>
+        City 3:
+        <input type="text" value={city3} onChange={handleCity3Change} />
+      </label>
+      <br />
+      <label>
+        City 4:
+        <input type="text" value={city4} onChange={handleCity4Change} />
+      </label>
+      <br />
+      <label>
+        City 5:
+        <input type="text" value={city5} onChange={handleCity5Change} />
+      </label>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default CityForm;
